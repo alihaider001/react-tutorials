@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
+import Button from "./components/Button/Button";
+import Counter from "./components/Counter/Counter";
+import ProductsList from "./components/ProductsList/ProductsList";
 
 function App() {
+  const handleLogin = () => {
+    console.log("Login Click");
+  };
+
+  const handleSignUp = () => {
+    console.log("Sign Up Click");
+  };
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Button />
+      <Button title={"Login"} onClick={handleLogin} />
+      <Button title={"Sign Up"} onClick={handleSignUp} />
+      <ProductsList />
     </div>
   );
 }
